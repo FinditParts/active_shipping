@@ -733,7 +733,7 @@ module ActiveShipping
       notifications = document.at('Notifications')
       return "" if notifications.nil?
 
-      "#{notifications.at('Severity').text} - #{notifications.at('Code').text}: #{notifications.at('Message').text}"
+      "#{notifications.at('Severity').to_s.text} - #{notifications.at('Code').to_s.text}: #{notifications.at('Message').to_s.text}"
     end
 
     def commit(request, test = false)
